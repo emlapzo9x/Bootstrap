@@ -20,9 +20,7 @@
 "Warning" = "Varning";
 "Applying" = "Tillämpar";
 "Cancel" = "Avbryt";
-"Update" = "Uppdatera";
 "Bootstrapping" = "Bootstrappar";
-"Uninstall" = "Avinstallera";
 "Uninstalling" = "Avinstallerar";
 "bootstrap uninstalled" = "bootstrap avinstallerad";
 
@@ -50,7 +48,7 @@
 "Status: Rebuilding Apps" = " Status: Bygger om Appar";
 "Status: Reinstalling Sileo" = " Status: Återinstallerar Sileo";
 "Status: Reinstalling Zebra" = " Status: Återinstallerar Zebra";
-"Sileo and Zebra reinstalled!" = "Sileo och Zebra återinstallerade!”;
+"Sileo and Zebra reinstalled!" = "Sileo och Zebra återinstallerade!";
 "Status: Rebuilding Icon Cache" = "Status: Bygger om Ikon-Cache";
 
 "openssh package is not installed" = "openssh-paket ej installerad";

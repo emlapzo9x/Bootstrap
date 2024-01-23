@@ -86,9 +86,18 @@ struct OptionsView: View {
                                         title: { Text("Respring") },
                                         icon: { Image(systemName: "arrow.clockwise") }
                                     )
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 10)
+                                    .foregroundColor((!isSystemBootstrapped() || !checkBootstrapVersion()) ? Color.accentColor : Color.init(uiColor: UIColor.label))
                                 }
-                                .buttonStyle(DopamineButtonStyle())
-                                .disabled(!isSystemBootstrapped())
+                                .frame(width: 250)
+                                .background(Color.clear)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.3)
+                                )
+                                .disabled(!isSystemBootstrapped() || !checkBootstrapVersion())
                                 
                                 Button {
                                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -98,9 +107,18 @@ struct OptionsView: View {
                                         title: { Text("Rebuild Apps") },
                                         icon: { Image(systemName: "arrow.clockwise") }
                                     )
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 10)
+                                    .foregroundColor((!isSystemBootstrapped() || !checkBootstrapVersion()) ? Color.accentColor : Color.init(uiColor: UIColor.label))
                                 }
-                                .buttonStyle(DopamineButtonStyle())
-                                .disabled(!isSystemBootstrapped())
+                                .frame(width: 250)
+                                .background(Color.clear)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.3)
+                                )
+                                .disabled(!isSystemBootstrapped() || !checkBootstrapVersion())
                                 
                                 Button {
                                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -110,9 +128,39 @@ struct OptionsView: View {
                                         title: { Text("Rebuild Icon Cache") },
                                         icon: { Image(systemName: "arrow.clockwise") }
                                     )
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 10)
+                                    .foregroundColor((!isSystemBootstrapped() || !checkBootstrapVersion()) ? Color.accentColor : Color.init(uiColor: UIColor.label))
                                 }
-                                .buttonStyle(DopamineButtonStyle())
-                                .disabled(!isSystemBootstrapped())
+                                .frame(width: 250)
+                                .background(Color.clear)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.3)
+                                )
+                                .disabled(!isSystemBootstrapped() || !checkBootstrapVersion())
+                                
+//                                Button {
+//                                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+//                                    fixNotification()
+//                                } label: {
+//                                    Label(
+//                                        title: { Text("Fix App Notification") },
+//                                        icon: { Image(systemName: "wrench") }
+//                                    )
+//                                    .frame(maxWidth: .infinity)
+//                                    .padding(.vertical, 10)
+//                                    .foregroundColor((!isSystemBootstrapped() || !checkBootstrapVersion()) ? Color.accentColor : Color.init(uiColor: UIColor.label))
+//                                }
+//                                .frame(width: 250)
+//                                .background(Color.clear)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 10)
+//                                        .stroke(.gray, lineWidth: 1)
+//                                        .opacity(0.3)
+//                                )
+//                                .disabled(!isSystemBootstrapped() || !checkBootstrapVersion())
                                 
                                 Button {
                                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -122,9 +170,18 @@ struct OptionsView: View {
                                         title: { Text("Reinstall Sileo & Zebra") },
                                         icon: { Image(systemName: "shippingbox") }
                                     )
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 10)
+                                    .foregroundColor((!isSystemBootstrapped() || !checkBootstrapVersion()) ? Color.accentColor : Color.init(uiColor: UIColor.label))
                                 }
-                                .buttonStyle(DopamineButtonStyle())
-                                .disabled(!isSystemBootstrapped())
+                                .frame(width: 250)
+                                .background(Color.clear)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(.gray, lineWidth: 1)
+                                        .opacity(0.3)
+                                )
+                                .disabled(!isSystemBootstrapped() || !checkBootstrapVersion())
                                 
                                 if isBootstrapInstalled() {
                                     Button {
@@ -135,8 +192,17 @@ struct OptionsView: View {
                                             title: { Text("Uninstall") },
                                             icon: { Image(systemName: "trash") }
                                         )
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.vertical, 10)
+                                        .foregroundColor(isSystemBootstrapped() ? Color.accentColor : Color.init(uiColor: UIColor.label))
                                     }
-                                    .buttonStyle(DopamineButtonStyle())
+                                    .frame(width: 250)
+                                    .background(Color.clear)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(.gray, lineWidth: 1)
+                                            .opacity(0.3)
+                                    )
                                     .disabled(isSystemBootstrapped())
                                 }
                             })
